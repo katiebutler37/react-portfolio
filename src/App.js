@@ -31,8 +31,6 @@ function App() {
 
   //renderPage function actually renders the content according to the state set
   const renderPage = () => {
-    console.log(window)
-    console.log('rendering page')
     switch (window) {
       case "portfolio":
         return <Portfolio />;
