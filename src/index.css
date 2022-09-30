@@ -51,6 +51,10 @@ body {
   font-weight: 600;
 }
 
+.item-selected{
+  color: greenyellow;
+}
+
 .toggle-icon{
   display: none;
 }

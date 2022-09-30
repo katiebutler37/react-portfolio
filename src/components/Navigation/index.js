@@ -1,35 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './style.css'
+function Navigation({window, itemSelected, closeIfOpen}) {    
 
-function Navigation() {
-    function itemSelected(e) {
-        switch(e.target.name) {
-            case ("about"):
-            break;
-            case ("portfolio"):
-            break;
-            case ("contact"):
-            break;
-            case ("resume"):
-            break;   
-            default:
-        }
-    };
-
-    
   return (
     <nav>
     <ul className='nav-items'>
       <li>
-        <span className="nav-item" name="about" onClick={itemSelected}>About me</span>
+        <span className={`nav-item ${window === 'about' ? 'active' : ""}`} id="about" onClick={()=>{
+          itemSelected('about');
+          closeIfOpen();
+        }}>About me</span>
       </li>
       <li>
-        <span className="nav-item" name="portfolio" onClick={itemSelected}>Portfolio</span>
+        <span className={`nav-item ${window === 'portfolio' ? 'active' : ""}`} id="portfolio" onClick={()=>{
+          itemSelected('portfolio');
+          closeIfOpen();
+        }}>Portfolio</span>
       </li>
         <li>
-          <span className="nav-item"  name="contact" onClick={itemSelected}>Contact</span>
+          <span className={`nav-item ${window === 'contact' ? 'active' : ""}`}  id="contact" onClick={()=>{
+          itemSelected('contact');
+          closeIfOpen();
+        }}>Contact</span>
         </li> 
         <li>
-          <span className="nav-item" name="resume" onClick={itemSelected}>Resume</span>
+          <span className={`nav-item ${window === 'resume' ? 'active' : ""}`} id="resume" onClick={()=>{
+          itemSelected('resume');
+          closeIfOpen();
+        }}>Resume</span>
         </li>
     </ul>
   </nav>
