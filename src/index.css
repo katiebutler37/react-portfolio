@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
 
 *{
-  font-family: 'Lora', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,62 +15,104 @@
   --dark: #000000;
   --darker: #111111;
   --error: rgb(228, 46, 1);
-  --spacing-one: calc(1rem * 0.5);
-  --spacing-two: calc(1rem);
-  --spacing-five: calc(2.5rem);
-
 }
 
 body {
-  margin: 0;
-  font-family: 'Lora', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  font-family: 'Chivo', sans-serif;
+  background-color:  rgba(35, 120, 117, 0.98);
 }
 
 
 .App {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100vw;
   overflow-x: hidden;  
   overflow-y: auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+main{
+  padding-bottom: 3.5rem;
+  width: 100vw;
+  margin: 30px;
 }
 
 .navbar{
-  width: 100%;
+  width: 100vw;
   height: 80px;
-  background-color: rgb(27, 27, 27);
+  background-color: rgba(22, 116, 113, 0.98);
   padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: whitesmoke;
+  color: white;
+  border-bottom: white 1px dashed;
 }
 
 .page-name{
-  font-size: 24px;
+  font-size: 37px;
   font-weight: 600;
+  font-family: 'Playfair Display', serif;
 }
 
 .nav-items{
   display: flex;
   cursor: pointer;
   list-style: none;
+  font-family: 'Chivo', sans-serif;
 }
 
 .nav-item{
   margin: 0 15px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-}
-
-.item-selected{
-  color: greenyellow;
 }
 
 .toggle-icon{
   display: none;
+}
+
+.about-me-wrapper{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 10px 50px 50px 0px;
+  color: white;
+}
+
+.heading{
+  margin-top: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+}
+
+.profile-pic{
+  max-width: 40%;
+  min-width: 200px;
+  border-bottom: white 50px solid;
+  border-top: white 10px solid;
+  border-left: white 10px solid;
+  border-right: white 10px solid;
+  margin: 40px 40px 40px 0px;
+  flex-grow: 1;
+  
+}
+
+.thats-me{
+ width: 120px;
+ height: 120px;
+  display: none;
+  position: relative;
+  left: 5px;
+  top: 15px;
+
+}
+
+.image-wrapper{
+  display: flex;
+  text-align: start;
 }
 
 button {
@@ -81,8 +123,9 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
-  background-color: orange;
+  margin: 10px 1px;
+  background-color: rgb(8, 23, 15);
+  color: white;
 }
 
 button:hover {
@@ -105,7 +148,10 @@ input {
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
+  margin-top: 10px;
+  width: 600px;
 }
+
 
 input:focus {
   border: 1px solid var(--secondary);
@@ -115,9 +161,32 @@ input:focus {
 textarea {
 	width: 600px;
 	height: 120px;
-	border: 3px solid #cccccc;
+	border: 3px solid var(--dark);
 	padding: 5px;
+  margin-top: 10px;
 }
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 3.5rem;
+  background-color: rgba(22, 116, 113, 0.98);
+}
+
+.icon {
+  max-height: 40px;
+  margin: 10px 10px 0 10px;
+}
+
+.icon-wrapper{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+
+
 
 @media(max-width: 768px){
 
@@ -160,7 +229,7 @@ textarea {
     position: absolute;
     top: 28px;
     right: 20px;
-    color: whitesmoke;
+    color: white;
   }
 
   .nav-items{
@@ -184,5 +253,20 @@ textarea {
     margin: 15px 0; 
     font-size: 20px;
     display: block;
+  }
+
+  .about-me-wrapper{
+    flex-direction: column;
+  }
+
+  .thats-me{
+    display: inline-block;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .thats-me{
+    display: none;
   }
 }

@@ -44,7 +44,7 @@ function Contact() {
   // JSX
   return (
     <section>
-      <h1 data-testid="contact-me">Contact me</h1>
+      <h1 className="heading">Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
@@ -64,6 +64,7 @@ function Contact() {
             onBlur={handleChange}
           />
         </div>
+        <br/>
         <div>
           <label htmlFor="message">Message:</label>
           <textarea
