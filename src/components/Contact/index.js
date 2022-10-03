@@ -44,7 +44,7 @@ function Contact() {
   // JSX
   return (
     <section>
-      <h1 className="heading">Contact me</h1>
+      <h1 className="heading contact-title">Get in touch</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>

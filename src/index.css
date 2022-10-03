@@ -85,8 +85,9 @@ main{
 .heading{
   margin-top: 30px;
   font-family: 'Playfair Display', serif;
-  font-size: 34px;
+  font-size: 22px;
 }
+
 
 .profile-pic{
   max-width: 40%;
@@ -97,7 +98,6 @@ main{
   border-right: white 10px solid;
   margin: 40px 40px 40px 0px;
   flex-grow: 1;
-  
 }
 
 .thats-me{
@@ -107,7 +107,10 @@ main{
   position: relative;
   left: 5px;
   top: 15px;
+}
 
+.portfolio-wrapper{
+  margin: 10px;
 }
 
 .image-wrapper{
@@ -115,17 +118,43 @@ main{
   text-align: start;
 }
 
-button {
+.project-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 40px 20px 0;
+  color: white;
+  font-family: 'Chivo', sans-serif;
+}
+
+.single-project{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 40px 10px;
+}
+
+.project-title{
+  font-size: 16px;
+  padding: 8px 0;
+  max-width: 250px;
+}
+
+.img-thumbnail{
+  max-width: 250px;
+}
+
+button, .link-btn {
   font-size: 1rem;
   text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
   margin: 10px 1px;
   background-color: rgb(8, 23, 15);
   color: white;
+  text-align: center;
 }
 
 button:hover {
@@ -135,6 +164,10 @@ button:hover {
 button[disabled] {
   cursor: default;
   opacity: .8;
+}
+
+.contact-title{
+  color: white;
 }
 
 form {
@@ -185,9 +218,16 @@ footer {
   padding: 5px;
 }
 
+.resume{
+  font-size: 28px;
+  color: white;
+}
 
-
-
+.resume-link{
+  color: white;
+  font-size: 20px;
+  text-decoration: underline;
+}
 @media(max-width: 768px){
 
   .navbar{
