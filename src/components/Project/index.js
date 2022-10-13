@@ -38,6 +38,12 @@ function Project() {
       name:
         "Katie's Quick Coding Quiz",
     },
+    {
+      deployed_link: "https://katiebutler37.github.io/code-quiz/",
+      repo_link: "https://github.com/RHunjan/dream-spots",
+      name:
+        "Dream Spots",
+    },
   ];
 
   return (
